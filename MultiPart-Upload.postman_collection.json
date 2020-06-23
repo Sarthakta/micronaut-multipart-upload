@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "1a12a934-b374-4787-aa6b-ff8a745f2313",
+		"name": "MultiPart-Upload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Multipart Uplaod with String JSON Map",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attachment",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "email",
+							"value": "{\"recipient\":\"amit_vyas@t.com\",\"subject\":\"Test Email Service\",\"htmlBody\":\"My First TeXt EmAiL\"}",
+							"contentType": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/mail/attachmentStringPart"
+			},
+			"response": []
+		},
+		{
+			"name": "Multipart Upload with JSON to POJO Part",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attachment",
+							"value": null,
+							"contentType": "multipart/form-data",
+							"type": "file"
+						},
+						{
+							"key": "email",
+							"value": "{\"recipient\":\"amit_vyas@trimble.com\",\"subject\":\"Test Email Service\",\"htmlBody\":\"My First TeXt EmAiL\"}",
+							"contentType": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/mail/attachment"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
