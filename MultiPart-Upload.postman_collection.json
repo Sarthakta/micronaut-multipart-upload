@@ -66,7 +66,7 @@
 						},
 						{
 							"key": "email",
-							"value": "{\"recipient\":\"amit_vyas@trimble.com\",\"subject\":\"Test Email Service\",\"htmlBody\":\"My First TeXt EmAiL\"}",
+							"value": "{\"recipient\":\"amit_vyas@t.com\",\"subject\":\"Test Email Service\",\"htmlBody\":\"My First TeXt EmAiL\"}",
 							"contentType": "",
 							"type": "text"
 						}
